@@ -1,5 +1,4 @@
-# Mask-PSTIN
-Improving crop type mapping by integrating LSTM with temporal random masking and pixel-set spatial information 
+# <p align="center">Improving crop type mapping by integrating LSTM with temporal random masking and pixel-set spatial information</p>
 
 The overall structure of Mask-PSTIN.
 ![image](https://github.com/user-attachments/assets/f9767bfd-7a21-4e0b-8830-7c3613dbb72f)
