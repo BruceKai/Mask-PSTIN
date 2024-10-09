@@ -50,7 +50,7 @@ NUM_LAYERS = 2
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-mask_prob = 0.00
+mask_prob = 0.40
 model = model.PSTIN(IN_CHANNELS,HIDDEN_SIZES,NUM_LAYERS,NUM_CLASSES)
 
 if torch.cuda.device_count() > 1:
@@ -76,7 +76,7 @@ train_kwargs = dict({'net':model,
                     'train_folder':train_folder,
                     'val_folder':val_folder,
                     'num_workers':NUM_WORKERS,
-                    'data_aug':False,
+                    'data_aug':True, # True means training model with temporal random masking augmentation
                     'model_name':model_name,
                     'resume':True,
                     'mask_probability':mask_prob
