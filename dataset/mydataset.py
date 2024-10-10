@@ -39,8 +39,9 @@ class MyDataset(Dataset):
         target = torch.from_numpy(target)
         
         if self.data_aug:
+            # temporal random masking augmentation
             p = np.random.random()
-            mask = torch.rand(feat.shape[0])<self.mask_probability
+            mask = torch.rand(feat.shape[0])<self.mask_probability 
             if p <0.5:
                 feat[mask] = 0
 
