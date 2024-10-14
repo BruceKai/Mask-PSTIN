@@ -34,8 +34,8 @@ The specific class information in this region is listed as follows:
 ``````
 data
 └── <train>
-    ├── data.npy # time-series satellite image patches with size of (t*c,h,w).
-    ├── lbl.npy # ground truth
+    ├── data.npy # time-series satellite image patches with size of (n,t*c,h,w).
+    ├── lbl.npy # ground truth 
 └── <val>
     ├── data.npy
     ├── lbl.npy
